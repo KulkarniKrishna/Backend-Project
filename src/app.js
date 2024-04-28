@@ -23,4 +23,10 @@ app.use(express.static("public"));
 // to be able to perform CURD operations on cookies stored in browser
 app.use(cookieParser());
 
+// routes imports
+import userRouter from "./routes/user.routes.js";
+
+//routes declarations
+app.use("/api/v1/users", userRouter);
+
 export { app };
